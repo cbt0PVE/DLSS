@@ -1,0 +1,7 @@
+{
+  "psnr": null,
+  "ssim": null,
+  "lpips": null,
+  "train_time_sec": null,
+  "gpu": "RTX 4060 Laptop GPU"
+}

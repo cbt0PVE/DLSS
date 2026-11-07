@@ -1,0 +1,91 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---------- Data / datasets ----------
+/data/
+/datasets/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# ---------- Model artifacts ----------
+/checkpoints/
+/runs/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.engine
+*.trt
+*.plan
+*.safetensors
+
+# ---------- Experiment heavy outputs ----------
+experiments/**/checkpoints/
+experiments/**/logs/
+experiments/**/outputs/*.mp4
+experiments/**/outputs/*.mov
+experiments/**/outputs/*.avi
+experiments/**/outputs/*.pth
+experiments/**/outputs/*.pt
+experiments/**/outputs/*.onnx
+experiments/**/outputs/*.engine
+
+# ---------- Media ----------
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+
+# ---------- Unity ----------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+*.csproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# ---------- IDE / OS ----------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ---------- Secrets ----------
+*.pem
+*.key
+secrets/

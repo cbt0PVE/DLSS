@@ -1,0 +1,10 @@
+# PyTorch 请根据 https://pytorch.org/get-started/locally/ 单独安装 CUDA 版本。
+# 先安装 PyTorch，再执行：pip install -r requirements.txt
+
+numpy
+opencv-python
+matplotlib
+tqdm
+tensorboard
+pyyaml
+scikit-image
