@@ -14,6 +14,7 @@
 - 本地项目骨架
 - README / ROADMAP / HANDOFF / docs / notes 模板
 - `.gitignore`、`requirements.txt`、`LICENSE`
+- 本地仓库已 push 到 `git@github.com:cbt0PVE/DLSS.git`
 
 ## 正在运行
 
@@ -21,17 +22,16 @@
 
 ## 下一步
 
-1. 把本地仓库 push 到 GitHub。
-2. Windows 上 clone 仓库，按 `docs/setup_windows.md` 配置环境。
-3. 跑 Day 1 验证命令，把结果写入 `notes/weekly/2026-W46.md`。
-4. 在 Windows 上更新本文件的“已完成 / 下一步”。
+1. Windows 上 clone 仓库，按 `docs/setup_windows.md` 配置环境。
+2. 跑 Day 1 验证命令，把结果写入 `notes/weekly/2026-W46.md`。
+3. 在 Windows 上更新本文件的“已完成 / 下一步”。
 
 ## 卡点
 
-- 尚未配置 GitHub remote URL。
 - Windows 环境未验证。
 - `torch.cuda.is_available()` 尚未确认。
 
 ## 相关 commit
 
-- 待提交：`chore: initial project scaffold`
+- `f9f0c48` chore: initial project scaffold
+
