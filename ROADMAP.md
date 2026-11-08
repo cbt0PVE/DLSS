@@ -80,9 +80,9 @@
 | 项目 | 状态 |
 |---|---|
 | 仓库骨架 | 完成 |
-| Windows 环境 | 未开始 |
-| Phase 0 | 进行中 |
-| 下一个任务 | Day 1：Windows 环境配置 |
+| Windows 环境 | 完成（torch 2.11.0+cu128 / RTX 4060 Laptop / CUDA 12.8） |
+| Phase 0 | 进行中（Day 2：Python + NumPy） |
+| 下一个任务 | Day 2：Python + NumPy 基础练习 |
 
 ## 风险与应对
 

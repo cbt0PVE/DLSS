@@ -11,7 +11,7 @@
 
 - [x] GitHub 仓库创建
 - [x] 本地项目骨架
-- [ ] Windows 环境验证
+- [x] Windows 环境验证（torch 2.11.0+cu128 / RTX 4060 Laptop / CUDA 12.8）
 - [ ] 第一个 SRCNN baseline
 
 当前重点：Python / PyTorch 基础，暂不碰 Unity。
@@ -68,6 +68,10 @@
 ├─ checkpoints/            # 模型权重，gitignore
 └─ runs/                   # TensorBoard 日志，gitignore
 ```
+
+> Windows 本机约定：仓库在 `C:\Users\10545\Desktop\DLSS`，
+> 数据集和训练输出放在 `D:\DLSS_data` / `D:\DLSS_runs`（不进 Git）。
+> 环境用 conda：`conda activate dlss`。
 
 ## 快速开始
 
