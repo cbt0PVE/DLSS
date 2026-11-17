@@ -1,7 +1,7 @@
 ﻿# SRCNN x2 baseline（skimage 10 张图）
 
 - 日期：2026-11-18
-- Git commit：`e2447ed`
+- Git commit：`fcbbde1`
 - 目标：M0 验收项 —— x2 超分 PSNR 比 bicubic 高 0.5 dB，且整条链路可复现。
 
 ## 配置
