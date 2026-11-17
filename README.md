@@ -12,9 +12,10 @@
 - [x] GitHub 仓库创建
 - [x] 本地项目骨架
 - [x] Windows 环境验证（torch 2.11.0+cu128 / RTX 4060 Laptop / CUDA 12.8）
-- [ ] 第一个 SRCNN baseline
+- [x] 第一个 SRCNN baseline：2x，**+0.593 dB** vs bicubic（27.390 / 26.797）
+- [ ] MLP / CNN MNIST 验收（第 4 周补跑）
 
-当前重点：Python / PyTorch 基础，暂不碰 Unity。
+当前重点：按 [docs/guides/stage-01-phase0.md](docs/guides/stage-01-phase0.md) 补基础理论，暂不碰 Unity。
 
 ## 目标
 
@@ -53,7 +54,8 @@
 ├─ docs/
 │  ├─ setup_windows.md     # Windows 环境配置
 │  ├─ learning_path.md     # 学习路径与资源
-│  └─ decisions.md         # 技术决策记录
+│  ├─ decisions.md         # 技术决策记录
+│  └─ guides/              # 每阶段学习清单（2–3 个月一份）
 ├─ notes/
 │  ├─ weekly/              # 周报
 │  ├─ monthly/             # 月报
@@ -78,7 +80,16 @@
 - Windows 环境配置：[docs/setup_windows.md](docs/setup_windows.md)
 - 20 个月路线：[ROADMAP.md](ROADMAP.md)
 - 学习路径：[docs/learning_path.md](docs/learning_path.md)
+- **阶段学习清单**：[docs/guides/](docs/guides/README.md)
 - 当前交接状态：[HANDOFF.md](HANDOFF.md)
+
+```powershell
+conda activate dlss
+python -m pytest src/tests -q                       # 单元测试
+python src/train.py --config configs/srcnn_x2.yaml  # 训 SRCNN，4060 上约 9 分钟
+python src/eval.py --config configs/srcnn_x2.yaml `
+  --checkpoint $env:DLSS_RUNS\srcnn_x2_skimage\best.pt --save-images
+```
 
 ## 两台机器
 

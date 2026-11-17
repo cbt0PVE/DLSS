@@ -81,8 +81,9 @@
 |---|---|
 | 仓库骨架 | 完成 |
 | Windows 环境 | 完成（torch 2.11.0+cu128 / RTX 4060 Laptop / CUDA 12.8） |
-| Phase 0 | 进行中（Day 2：Python + NumPy） |
-| 下一个任务 | Day 2：Python + NumPy 基础练习 |
+| SRCNN 2x baseline | 完成，**+0.593 dB** vs bicubic |
+| Phase 0 | 进行中（工程链路已通，理论按 `docs/guides/stage-01-phase0.md` 补） |
+| 下一个任务 | 换 BSDS500 复跑 + 三个消融（去残差 / L2 / 小核） |
 
 ## 风险与应对
 

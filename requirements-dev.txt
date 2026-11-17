@@ -1,0 +1,2 @@
+# 仅开发用：测试。运行时依赖见 requirements.txt。
+pytest>=8.0

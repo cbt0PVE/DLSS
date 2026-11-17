@@ -1,0 +1,33 @@
+﻿# SRCNN 2x baseline
+# 数据：scikit-image 自带的 10 张真实照片（离线、可复现）
+# 口径：Y 通道、bicubic 降质、边界裁 8px、PSNR(dB)
+
+experiment:
+  name: srcnn_x2_skimage
+  seed: 42
+
+data:
+  sources: [astronaut, chelsea, coffee, rocket, camera, grass, gravel, brick, clock, immunohistochemistry]
+  val_images: [coffee, grass]   # 8 张训练 / 2 张验证（一张平滑、一张高频纹理）
+  scale: 2
+  patch_size: 96
+  batch_size: 16
+  num_workers: 0
+  augment: true
+
+model:
+  name: srcnn
+  in_channels: 1
+  channels: [64, 32]
+  kernels: [9, 5, 5]
+  residual: true
+
+train:
+  iters: 20000
+  lr: 0.0001
+  loss: l1
+  amp: true
+  grad_clip: 1.0
+  log_every: 1000
+  val_every: 2000
+  device: cuda

@@ -25,11 +25,24 @@
 ## 当前进度
 
 - [x] 仓库骨架
-- [ ] Windows 环境
-- [ ] Python / NumPy 基础
-- [ ] PyTorch 基础
-- [ ] MLP / CNN
-- [ ] SRCNN
+- [x] Windows 环境（torch 2.11.0+cu128 / RTX 4060 / CUDA 12.8）
+- [x] SRCNN 2x baseline：27.390 dB vs bicubic 26.797 dB = **+0.593 dB**
+- [ ] Python / NumPy 基础（第 1 周学习任务）
+- [ ] PyTorch 基础（第 3 周）
+- [ ] MLP / CNN MNIST（第 4 周）
+
+> 说明：工程链路先跑通了（数据管线 → 训练 → 评估 → 实验记录），
+> 基础理论按 `docs/guides/stage-01-phase0.md` 的 8 周计划补。
+> MLP / CNN 的验收没有单独建 experiment，会在第 4 周补跑并记录。
+
+## 已有证据
+
+| 项目 | 证据 |
+|---|---|
+| 环境 | `docs/setup_windows.md` 第 5 节实测输出 |
+| SRCNN | `experiments/2026-11-18_srcnn_skimage_2x/`（config + metrics + 对比图） |
+| 复现 | `python src/train.py --config configs/srcnn_x2.yaml`，519 s |
+| 测试 | `python -m pytest src/tests -q`，10 passed |
 
 ## 风险
 

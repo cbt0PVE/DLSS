@@ -1,0 +1,82 @@
+{
+  "experiment": "srcnn_x2_skimage",
+  "iters": 20000,
+  "params": 57281,
+  "border": 8,
+  "best_step": 10000,
+  "best_psnr": 27.39005376202519,
+  "final": {
+    "psnr": 27.39005376202519,
+    "psnr_bicubic": 26.796969635453713,
+    "gain_db": 0.5930841265714761,
+    "border": 8,
+    "images": [
+      {
+        "name": "coffee",
+        "psnr": 30.765451520764707,
+        "psnr_bicubic": 29.86876974589901
+      },
+      {
+        "name": "grass",
+        "psnr": 24.01465600328567,
+        "psnr_bicubic": 23.72516952500842
+      }
+    ]
+  },
+  "wall_time_sec": 519.0,
+  "device": "cuda",
+  "torch": "2.11.0+cu128",
+  "config": {
+    "experiment": {
+      "name": "srcnn_x2_skimage",
+      "seed": 42
+    },
+    "data": {
+      "sources": [
+        "astronaut",
+        "chelsea",
+        "coffee",
+        "rocket",
+        "camera",
+        "grass",
+        "gravel",
+        "brick",
+        "clock",
+        "immunohistochemistry"
+      ],
+      "val_images": [
+        "coffee",
+        "grass"
+      ],
+      "scale": 2,
+      "patch_size": 96,
+      "batch_size": 16,
+      "num_workers": 0,
+      "augment": true
+    },
+    "model": {
+      "name": "srcnn",
+      "in_channels": 1,
+      "channels": [
+        64,
+        32
+      ],
+      "kernels": [
+        9,
+        5,
+        5
+      ],
+      "residual": true
+    },
+    "train": {
+      "iters": 20000,
+      "lr": 0.0001,
+      "loss": "l1",
+      "amp": true,
+      "grad_clip": 1.0,
+      "log_every": 1000,
+      "val_every": 2000,
+      "device": "cuda"
+    }
+  }
+}
